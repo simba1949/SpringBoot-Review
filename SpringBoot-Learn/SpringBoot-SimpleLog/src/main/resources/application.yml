@@ -1,0 +1,15 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: SpringBoot-SimpleLog
+
+logging:
+  # 日志级别
+  level:
+    root: debug
+  # 输出日志路径和名称,相对目录是相对当前最大项目的目录
+  #file: SpringBoot-Learn/SpringBoot-SimpleLog/log/log.log
+  # 输出日志的路径，不含名称，相对目录是相对当前最大项目的目录
+  path: SpringBoot-Learn/SpringBoot-SimpleLog/log/

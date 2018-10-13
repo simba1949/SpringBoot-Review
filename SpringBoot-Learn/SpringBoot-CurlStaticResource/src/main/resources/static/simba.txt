@@ -1,0 +1,2 @@
+author.username=simba1949
+author.motto=天道酬勤

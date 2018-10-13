@@ -1,0 +1,8 @@
+server:
+  port: 8080
+
+author:
+  username: simba1949
+  motto: 天道酬勤
+  address: 深圳
+  age:
