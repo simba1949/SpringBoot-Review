@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="60 seconds">
+    <contextName>Logback-Console</contextName>
+    <!--
+		子节点<appender>：负责写日志的组件，它有两个必要属性name和class。
+		name指定appender名称;
+		class指定appender的全限定名;
+	-->
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <!--
+			<encoder>：对日志进行格式化。
+			<target>：字符串System.out(默认)或者System.err
+			<withJansi>：
+		-->
+        <encoder>
+            <pattern>%-4relative [%thread] %-5level %logger{35} - %msg %n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="DEBUG">
+        <appender-ref ref="console"/>
+    </root>
+</configuration>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <!--
+            <file>：被写入的文件名，可以使相对目录，也可以是绝对目录
+            <append>：如果是 true，日志被追加到文件结尾，如果是 false，清空现存文件，默认是true。
+            <prudent>：如果是 true，日志会被安全的写入文件，即使其他的FileAppender也在向此文件做写	入操作，效率低，默认是 false。
+            <immediateFlush>：将immediateFlush设置为false以获得更高的日志吞吐量
+        -->
+        <file>SpringBoot-Logback/Logback-File/log/testFile.log</file>
+        <append>true</append>
+        <!-- set immediateFlush to false for much higher logging throughput -->
+        <immediateFlush>true</immediateFlush>
+        <!-- encoders are assigned the type
+             ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <encoder>
+            <pattern>%-4relative [%thread] %-5level %logger{35} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="DEBUG">
+        <appender-ref ref="FILE" />
+    </root>
+</configuration>
