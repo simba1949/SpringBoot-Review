@@ -1,0 +1,15 @@
+server:
+  port: 8081
+spring:
+  mail:
+    # 邮箱服务器地址
+    host: smtp.qq.com
+    # 邮箱地址
+    username: 932759972@qq.com
+    # 邮箱密码或者授权码
+    password: thgeydcvgpntbdfi
+    properties:
+      mail:
+        smtp:
+          auth: true
+          timeout: 25000
