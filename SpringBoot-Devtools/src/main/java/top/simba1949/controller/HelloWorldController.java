@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @author v_jiayytian@tencent.com
+ * @author simba1949@outlook.com
  * @date 2018/10/17 15:10
  */
 @RestController
@@ -18,6 +18,6 @@ public class HelloWorldController {
 
     @RequestMapping("/name/{name}")
     public String returnName(@PathVariable String name){
-        return name;
+        return "Tony:" + name;
     }
 }

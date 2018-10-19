@@ -16,7 +16,7 @@ public class WebConfig implements WebMvcConfigurer {
         //第一个方法设置访问路径前缀，第二个方法设置资源路径
         registry.addResourceHandler("/static/**")
                 .addResourceLocations("classpath:/static/");
-        registry.addResourceHandler("/template/**")
-                .addResourceLocations("classpath:/template/");
+        registry.addResourceHandler("/templates/**")
+                .addResourceLocations("classpath:/templates/");
     }
 }

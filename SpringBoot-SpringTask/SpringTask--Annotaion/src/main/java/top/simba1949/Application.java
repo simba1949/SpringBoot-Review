@@ -7,7 +7,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 /**
  *
  * @EnableScheduling 开启 schedule 定时任务支持
- * @author v_jiayytian@tencent.com
+ * @author simba1949@outlook.com
  * @date 2018/10/18 10:54
  */
 @EnableScheduling

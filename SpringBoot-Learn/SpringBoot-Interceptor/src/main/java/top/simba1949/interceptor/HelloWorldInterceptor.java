@@ -20,7 +20,7 @@ public class HelloWorldInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
         System.out.println("1");
         // 返回 true 时，才会放行
-        return false;
+        return true;
     }
 
     @Override

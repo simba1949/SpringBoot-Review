@@ -3,7 +3,7 @@
 ## 开发环境
 
 *  JDK 1.8.0_171
-* springboot 2.0.5.RELEASE
+* springboot 2.0.6.RELEASE
 * Apache Maven 3.5.3
 
 ## SpringBoot 官方文档
@@ -28,7 +28,7 @@ https://docs.spring.io/spring-boot/docs/current/reference/html/index.html
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.5.RELEASE</version>
+        <version>2.0.6.RELEASE</version>
     </parent>
 
     <properties>
@@ -287,7 +287,7 @@ public class Application {
  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
   '  |____| .__|_| |_|_| |_\__, | / / / /
  =========|_|==============|___/=/_/_/_/
- :: Spring Boot ::        (v2.0.5.RELEASE)
+ :: Spring Boot ::        (v2.0.6.RELEASE)
 ```
 
 在 src/main/resources下新建一个 banner.txt，通过 <http://patorjk.com/software/taag> 网站生成字符，如敲入simba1949，将网站生成的字符复制在 banner.txt 中，即可定制
@@ -763,7 +763,7 @@ http://IP:PORT/static/fileName.suffixName 访问到，也可以在static目录�
 下载：文件，zip，md，word，xls，
 ```
 
-SpringBoot 2.0.5.RELEASE 版本需要配置才能正常访问到静态资源
+SpringBoot 2.0.6.RELEASE 版本需要配置才能正常访问到静态资源
 
 ```java
 package top.simba1949.config;
