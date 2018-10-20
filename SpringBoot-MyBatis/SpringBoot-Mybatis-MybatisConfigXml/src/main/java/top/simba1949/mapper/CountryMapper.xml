@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="top.simba1949.mapper.CountryMapper">
+
+    <insert id="insert">
+        insert into
+        country(countryname, countrycode)
+        values (#{countryName}, #{countryCode})
+    </insert>
+
+    <delete id="delete">
+        delete from
+        country
+        where
+        id = #{id}
+    </delete>
+
+    <update id="update">
+        update country
+        <set>
+            <if test="null != countryName and '' != countryName">countryname = #{countryName},</if>
+            <if test="null != countryCode and '' != countryCode">countrycode = #{countryCode},</if>
+            <!--为了避免SQL错误产生，id = #{id} 的赋值仍然保留-->
+            id = #{id},
+        </set>
+        where id = #{id}
+    </update>
+
+    <select id="getList" resultType="top.simba1949.common.CountryCommon">
+        select
+        id, countryname, countrycode
+        from
+        country
+        <where>
+            <if test="null != commonStart.id and commonStart.id > 0">and id = #{commonStart.id}</if>
+            <if test="null != commonStart.countryName and '' != commonStart.countryName">and countryname = #{commonStart.countryName}</if>
+            <if test="null != commonStart.countryCode and '' != commonStart.countryCode">and countrycode = #{commonStart.countryCode}</if>
+        </where>
+
+    </select>
+</mapper>

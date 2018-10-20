@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+        "> <!-- bean definitions here -->
+
+    <!--数据连接信息-->
+    <context:property-placeholder location="classpath*:jdbc.properties"></context:property-placeholder>
+    <!--声明式事务aop配置-->
+    <aop:config>
+        <aop:pointcut id="aoppointcut" expression="execution(* top.simba1949.service.impl.*.*(..))"></aop:pointcut>
+        <aop:advisor advice-ref="txadvice" pointcut-ref="aoppointcut"></aop:advisor>
+    </aop:config>
+    <!--事务的传播特性-->
+    <tx:advice id="txadvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <!--tx:method表示哪些方法需要开启事务，propagation表示必须要求，
+                isolation表示事物隔离级别,rollback-for表示发生异常回滚
+            -->
+            <tx:method name="add*" propagation="REQUIRED" isolation="DEFAULT" rollback-for="java.lang.Exception"/>
+            <tx:method name="save*" propagation="REQUIRED" isolation="DEFAULT" rollback-for="java.lang.Exception"/>
+            <tx:method name="insert*" propagation="REQUIRED" isolation="DEFAULT" rollback-for="java.lang.Exception"/>
+            <tx:method name="update*" propagation="REQUIRED" isolation="DEFAULT" rollback-for="java.lang.Exception"/>
+            <tx:method name="modify*" propagation="REQUIRED" isolation="DEFAULT" rollback-for="java.lang.Exception"/>
+            <tx:method name="delete*" propagation="REQUIRED" isolation="DEFAULT" rollback-for="java.lang.Exception"/>
+
+            <tx:method name="query*" read-only="true"></tx:method>
+            <tx:method name="select*" read-only="true"></tx:method>
+            <tx:method name="find*" read-only="true"></tx:method>
+        </tx:attributes>
+    </tx:advice>
+    <!--事务管理器-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
+    <!--数据源-->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="driverClassName" value="${jdbc.driverClassName}"></property>
+        <property name="url" value="${jdbc.url}"></property>
+        <property name="username" value="${jdbc.username}"></property>
+        <property name="password" value="${jdbc.password}"></property>
+    </bean>
+
+
+    <!--mybatis的基本配置-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!--数据源配置-->
+        <property name="dataSource" ref="dataSource"></property>
+        <!--告诉spring，mybatis配置文件位置-->
+        <property name="configLocation" value="classpath:mybatis.xml"></property>
+        <!--告诉spring，mybatisMpapper配置文件位置-->
+        <property name="mapperLocations">
+            <array>
+                <value>classpath*:top/simba1949/mapper/*Mapper.xml</value>
+            </array>
+        </property>
+        <!--给包取别名-->
+        <property name="typeAliasesPackage" value="top.simba1949.model"></property>
+    </bean>
+    <!--mapper扫描配置-->
+    <bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!--指定dao接口的路径-->
+        <property name="basePackage" value="top.simba1949.mapper"></property>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
+    </bean>
+</beans>
