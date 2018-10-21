@@ -1,0 +1,10 @@
+server:
+  port: 8081
+
+spring:
+  mvc:
+    view:
+      # 前缀 ，如果这里最后添加了一个/，那么就不需要在controller的函数返回的时候加/，否则就需要添加，一般都是在这里添加
+      prefix: /WEB-INF/views/
+      # 后缀
+      suffix: .jsp
