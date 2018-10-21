@@ -11,6 +11,7 @@
     <modules>
         <module>SpringBoot-Mybatis-MybatisConfigXml</module>
         <module>SpringBoot-Mybatis-SpringBootConfigYml</module>
+        <module>Mybatis-Generator</module>
     </modules>
 
     <parent>
