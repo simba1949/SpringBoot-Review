@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Logback-Console" />
+        <module name="Logback-DB" />
+        <module name="Logback-DB-DataSource" />
+        <module name="Logback-File" />
+        <module name="Mybatis-Generator-Cmd" />
+        <module name="Mybatis-Generator-Java" />
+        <module name="Mybatis-Generator-Maven" />
+        <module name="MybatisPlus-Generator" />
+        <module name="Redis-Jedis" />
+        <module name="RollingFile-FixedWindowRollingPolicy" />
+        <module name="RollingFile-SizeAndTimeBasedRollingPolicy" />
+        <module name="RollingFile-TimeBasedRollingPolicy" />
+        <module name="Spring-ApplicationEvent" />
+        <module name="Spring-SpringEL" />
+        <module name="SpringBoot-Actuator" />
+        <module name="SpringBoot-Banner" />
+        <module name="SpringBoot-CurlStaticResource" />
+        <module name="SpringBoot-Database" />
+        <module name="SpringBoot-DefaultTomcat" />
+        <module name="SpringBoot-Devtools" />
+        <module name="SpringBoot-Email" />
+        <module name="SpringBoot-Exception" />
+        <module name="SpringBoot-Favicon" />
+        <module name="SpringBoot-FileUploadAndDownload" />
+        <module name="SpringBoot-Freemarker" />
+        <module name="SpringBoot-Interceptor" />
+        <module name="SpringBoot-Jetty" />
+        <module name="SpringBoot-Jsp" />
+        <module name="SpringBoot-Lombok" />
+        <module name="SpringBoot-Mybatis-MybatisConfigXml" />
+        <module name="SpringBoot-Mybatis-SpringBootConfigYml" />
+        <module name="SpringBoot-MybatisPlus-MybatisConfig" />
+        <module name="SpringBoot-MybatisPlusProject" />
+        <module name="SpringBoot-Prefile" />
+        <module name="SpringBoot-PropertiesAndXml" />
+        <module name="SpringBoot-ResponseXml" />
+        <module name="SpringBoot-RootConfig" />
+        <module name="SpringBoot-SimpleLog" />
+        <module name="SpringBoot-SimpleStart" />
+        <module name="SpringBoot-SSL" />
+        <module name="SpringBoot-Swagger2" />
+        <module name="SpringBoot-Thymeleaf" />
+        <module name="SpringBoot-TurnOffAutoConfiguration" />
+        <module name="SpringBoot-Undertow" />
+        <module name="SpringTask--Annotaion" />
+        <module name="SpringTask-Xml" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Logback-Console" target="1.8" />
+      <module name="Logback-DB" target="1.8" />
+      <module name="Logback-DB-DataSource" target="1.8" />
+      <module name="Logback-File" target="1.8" />
+      <module name="Logback-RollingFile" target="1.8" />
+      <module name="Mybatis-Generator" target="1.5" />
+      <module name="Mybatis-Generator-Cmd" target="1.5" />
+      <module name="Mybatis-Generator-Java" target="1.5" />
+      <module name="Mybatis-Generator-Maven" target="1.5" />
+      <module name="MybatisPlus-Generator" target="1.8" />
+      <module name="Redis-Jedis" target="1.8" />
+      <module name="RollingFile-FixedWindowRollingPolicy" target="1.8" />
+      <module name="RollingFile-SizeAndTimeBasedRollingPolicy" target="1.8" />
+      <module name="RollingFile-TimeBasedRollingPolicy" target="1.8" />
+      <module name="Spring-ApplicationEvent" target="1.8" />
+      <module name="Spring-SpringEL" target="1.8" />
+      <module name="SpringBoot-Actuator" target="1.8" />
+      <module name="SpringBoot-Banner" target="1.8" />
+      <module name="SpringBoot-CurlStaticResource" target="1.8" />
+      <module name="SpringBoot-Database" target="1.5" />
+      <module name="SpringBoot-DefaultTomcat" target="1.8" />
+      <module name="SpringBoot-Devtools" target="1.8" />
+      <module name="SpringBoot-Email" target="1.8" />
+      <module name="SpringBoot-Exception" target="1.8" />
+      <module name="SpringBoot-Favicon" target="1.8" />
+      <module name="SpringBoot-FileUploadAndDownload" target="1.8" />
+      <module name="SpringBoot-Freemarker" target="1.8" />
+      <module name="SpringBoot-Interceptor" target="1.8" />
+      <module name="SpringBoot-Jetty" target="1.8" />
+      <module name="SpringBoot-Jsp" target="1.8" />
+      <module name="SpringBoot-Learn" target="1.8" />
+      <module name="SpringBoot-Logback" target="1.8" />
+      <module name="SpringBoot-Lombok" target="1.8" />
+      <module name="SpringBoot-MyBatis" target="1.8" />
+      <module name="SpringBoot-Mybatis-MybatisConfigXml" target="1.8" />
+      <module name="SpringBoot-Mybatis-SpringBootConfigYml" target="1.8" />
+      <module name="SpringBoot-MybatisPlus" target="1.8" />
+      <module name="SpringBoot-MybatisPlus-MybatisConfig" target="1.8" />
+      <module name="SpringBoot-MybatisPlusProject" target="1.8" />
+      <module name="SpringBoot-Prefile" target="1.8" />
+      <module name="SpringBoot-PropertiesAndXml" target="1.8" />
+      <module name="SpringBoot-Redis" target="1.8" />
+      <module name="SpringBoot-ReplaceContainer" target="1.8" />
+      <module name="SpringBoot-ResponseXml" target="1.8" />
+      <module name="SpringBoot-Review" target="1.8" />
+      <module name="SpringBoot-RootConfig" target="1.8" />
+      <module name="SpringBoot-SimpleLog" target="1.8" />
+      <module name="SpringBoot-SimpleStart" target="1.8" />
+      <module name="SpringBoot-Spring-Learn" target="1.8" />
+      <module name="SpringBoot-SpringTask" target="1.8" />
+      <module name="SpringBoot-SSL" target="1.8" />
+      <module name="SpringBoot-Swagger2" target="1.8" />
+      <module name="SpringBoot-Thymeleaf" target="1.8" />
+      <module name="SpringBoot-TurnOffAutoConfiguration" target="1.8" />
+      <module name="SpringBoot-Undertow" target="1.8" />
+      <module name="SpringTask--Annotaion" target="1.8" />
+      <module name="SpringTask-Xml" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

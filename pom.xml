@@ -24,6 +24,7 @@
         <module>SpringBoot-MyBatis</module>
         <module>SpringBoot-MybatisPlus</module>
         <module>SpringBoot-Jsp</module>
+        <module>SpringBoot-Redis</module>
     </modules>
 
     <parent>
